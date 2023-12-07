@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/ahorcado.css">
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <div id="ahorcado-container">
+        <div id="placas-container"></div>
+        <select id="categorias">
+            <option value="">Selecciona categoria</option>
+            <option value="animales_deserticos">Animales deserticos</option>
+            <option value="objetos_de_vaquero">Objetos de vaqueros</option>
+            <option value="desierto">Nombre de Desiertos</option>
+        </select>
+        <canvas id="ahorcado"></canvas>
+        <h1>Hangman game</h1>
+        <div id="teclado">
+            <div class="tecla" data-letra="a">A</div>
+            <div class="tecla" data-letra="b">B</div>
+            <div class="tecla" data-letra="c">C</div>
+            <div class="tecla" data-letra="d">D</div>
+            <div class="tecla" data-letra="e">E</div>
+            <div class="tecla" data-letra="f">F</div>
+            <div class="tecla" data-letra="g">G</div>
+            <div class="tecla" data-letra="h">H</div>
+            <div class="tecla" data-letra="i">I</div>
+            <div class="tecla" data-letra="j">J</div>
+            
+            <div class="tecla" data-letra="k">K</div>
+            <div class="tecla" data-letra="l">L</div>
+            <div class="tecla" data-letra="m">M</div>
+            <div class="tecla" data-letra="n">N</div>
+            <div class="tecla" data-letra="ñ">Ñ</div>
+            <div class="tecla" data-letra="o">O</div>
+            <div class="tecla" data-letra="p">P</div>
+            <div class="tecla" data-letra="q">Q</div>
+            <div class="tecla" data-letra="r">R</div>
+            <div class="tecla" data-letra="s">S</div>
+            <div class="tecla" data-letra="t">T</div>
+            
+            <div class="tecla" data-letra="u">U</div>
+            <div class="tecla" data-letra="v">V</div>
+            <div class="tecla" data-letra="w">W</div>
+            <div class="tecla" data-letra="x">X</div>
+            <div class="tecla" data-letra="y">Y</div>
+            <div class="tecla" data-letra="z">Z</div>
+        </div>
+        <div id="ganador">
+            <h2>¡Felicidades  Ganaste!</h2>
+            <br>
+            <br>
+            <br>
+            <button id="reiniciar-ganador-btn">Nuevo Juego</button>
+        </div>
+        <div id="perdedor">
+            <h2>¡uPss Perdiste!</h2>
+            <br>
+            <br><br>
+            <button id="reiniciar-perdedor-btn">Intentar de nuevo</button>
+        </div>
+        <div id="errores"></div>
+        <div id="palabra"></div>
+        <div id="letras"></div>
+        <div id="intentos"></div>
+    </div>
+<script src="public/js/ahorcado.js"></script>
+</body>
+</html> 

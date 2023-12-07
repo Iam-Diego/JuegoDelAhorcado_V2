@@ -1,0 +1,332 @@
+
+body {
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+#ahorcado-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+
+
+#errores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#teclado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Ajuste para que las teclas sean de 100px por 100px y en tres filas */
+.tecla {
+    width: 80px;
+    height: 80px;
+    margin: 10px;  /* Margen para separación entre teclas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* Organizar en tres filas verticales */
+#teclado {
+    flex-wrap: wrap;
+    max-height: 350px;  /* Ajusta la altura máxima según tu preferencia */
+}
+
+.tecla {
+    flex-basis: calc(20% - 5px);  /* Ajusta el ancho de cada tecla y deja espacio entre ellas */
+}
+
+
+
+
+.tecla[data-letra="a"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="b"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="c"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="d"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="e"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="f"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="g"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="h"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="i"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="j"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="k"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="l"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="m"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="n"] {
+    background-image: url('../img/letra.png');
+}
+.tecla[data-letra="ñ"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="o"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="p"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="q"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="r"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="s"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="t"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="u"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="v"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="w"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="x"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="y"] {
+    background-image: url('../img/letra.png');
+}
+
+.tecla[data-letra="z"] {
+    background-image: url('../img/letra.png');
+}
+
+#palabra {
+    font-size: 24px;
+    margin: 20px;
+    color: white;
+    text-align: center;
+}
+
+#letras {
+    font-size: 20px;
+    margin: 20px;
+    color: white;
+    text-align: center;
+}
+
+#errores img {
+    width: 190px;  
+    height: 390px;
+}
+#placas-container {
+    position: fixed;
+    top: 20px; 
+    right: 20px; 
+    display: flex;
+    align-items: flex-end; 
+    z-index: 1;
+}
+
+.placa-img {
+    width: 50px;  
+    height: 50px; 
+    margin-bottom: 5px; 
+}
+#intentos {
+font-size: 4em;
+color: white;
+position: absolute;
+right: 355px; 
+bottom: 65px; 
+}
+label {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #333;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: #333;
+    outline: none;
+}
+
+select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+option {
+    background-color: #ecf0f1;
+    color: #333;
+}
+#ganador, #perdedor {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100;
+}
+#ganador, #perdedor {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+#ganador img, #perdedor img {
+    width:800px;
+    height: 800px;
+    margin-bottom: 10px; 
+}
+
+#ganador h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: green; 
+}
+
+#perdedor h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: red; /
+}
+
+#reiniciar-ganador-btn,
+#reiniciar-perdedor-btn {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+margin-top: 20px;
+padding: 10px 20px;
+cursor: pointer;
+background-color: rgb(23, 198, 23);
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+z-index: 101; 
+}
+
+#ganador {
+   
+    top: 60%;
+    left: 65%;
+    transform: translate(-60%, -60%);
+}
+
+#perdedor {
+   
+    top: 60%;
+    left: 35%;
+    transform: translate(-40%, -60%);
+}
+
